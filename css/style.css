@@ -1,0 +1,1015 @@
+body {
+    margin: 0px;
+    font-family: 'Heebo', sans-serif;
+    padding-top: 70px;
+    position: relative;
+    background-color: white;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 1440px;
+    max-width: 90%;
+    margin: auto;
+    padding: 0 8px;
+}
+
+header {
+    height: 70px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+header .container a {
+    text-decoration: none;
+    color: #000000;
+}
+
+header .container .logo {
+    font-size: 27px;
+    font-weight: 400;
+}
+
+header .container .logo .logoDot {
+    height: 10px;
+    width: 10px;
+    border-radius: 5px;
+    background-color: #3E50E5;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 4px;
+}
+
+header nav ul li {
+    display: inline-block;
+    padding-right: 26px;
+}
+
+header nav ul li.menu {
+    display: none;
+    position: relative;
+    transition: rotate 0.5s;
+}
+
+@keyframes down {
+    from {height: 0;}
+    to {height: 800px;}
+  }
+
+@keyframes up {
+    from {height: 800px;}
+    to {height: 0;}
+  }
+
+.dropdown_container ul {
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    padding: 0 50px;
+    box-sizing: border-box;
+    background-color: #000000;
+    text-align: center;
+    list-style-type: none;
+    height: 0px;
+    overflow:hidden;
+}
+
+.dropdown_container ul li {
+    padding: 15px;
+    border-bottom: 1px solid #3E3E3E;
+    border-radius: 30px;
+}
+
+.dropdown_container ul li a {
+    text-decoration: none;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.dropdown_container ul li a:hover {
+    color: #3E50E5;
+}
+
+header nav ul li img {
+    vertical-align: middle;
+    width: 25px;
+    height: auto;
+}
+
+header nav ul li a {
+    font-weight: 400;
+    font-size: 15px;
+    color: #3E3E3E;
+    text-decoration: none;
+}
+
+header nav ul li a:hover {
+    color: #3E50E5;
+}
+
+header nav ul li:last-of-type{
+    padding-right: 0px;
+}
+
+.hero_img {
+    position: relative;
+    z-index: 0;
+}
+
+.hero_img img {
+    max-width: 100%;
+}
+
+.mainImg {
+    position: relative;
+    cursor: pointer;
+}
+
+.play,
+.pause  {
+    z-index: 1;
+    position:absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    max-width: 500px;
+    cursor: pointer;
+}
+
+.hero_img .hero_content {
+    position: absolute;
+    top:0;
+    max-width:35%;
+    height: 100%;
+}
+
+.hero_content .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    color: #ffffff;
+}
+
+.hero_content .container h1 {
+    font-weight: 400;
+    font-size: 45px;
+    font-weight: 400;
+    line-height: 56px;
+    max-width: 500px;
+    height: 112px;
+    margin: 0 0 19px 0;
+    transition-duration: 200ms;
+}
+
+.hero_content .container p {
+    font-weight: 300;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 28px;
+    max-width: 505px;
+    height: 80px;
+    margin: 0 0 19px 0;
+}
+
+.hero_content .container button {
+    width: 200px;
+    max-width: 100%;
+    height: 50px;
+    background-color: #3E50E5;
+    color:#FFFFFF;
+    border-radius: 25px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-right: 50px;
+    transition-duration: 200ms;
+}
+
+.hero_content .container button:hover {
+    background-color: #9B9B9B;
+}
+
+.slider {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+#floatingDot {
+    position: absolute;
+    background-color: rgb(255, 0, 242);
+    height: 10px;
+    width: 10px;
+    border-radius: 10px;
+    z-index: 2;
+    translate: 0px;
+}
+
+.dot {
+    display: inline-block;
+    z-index: 1;
+    height: 10px;
+    width: 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #000000;
+    cursor: pointer;
+    margin: 3px;
+    transition-duration: 0.15s;
+}
+
+section.best-sellers h2 {
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 42px;
+    text-align: center;
+    margin: 90px 0 31px 0;
+}
+
+section.best-sellers hr {
+    border: none;
+    border-top: 6px solid #67F11D;
+    width: 66px;
+    margin: auto;
+}
+
+section.best-sellers .container {
+    padding: 0;
+}
+
+section.best-sellers .container .product-slider {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 76px;
+}
+
+section.best-sellers .container .product {
+    border: 1px solid #DDDDDD;
+    border-radius: 8px;
+    max-width:33%;
+    text-align: center;
+    margin: 8px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    cursor: pointer;
+}
+
+section.best-sellers .container .product .product-img img {
+    max-width: 100%;
+}
+
+section.best-sellers .container .product.new::before {
+    content: "New";
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background-color: #EC1C1C;
+    border-radius: 16px;
+    padding: 3px 15px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+    color: #FFFFFF;
+}
+
+section.best-sellers .container .product .catagories {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 30px;
+    color: #3E50E5;
+    margin-bottom: 9px;
+    margin-top: 0;
+}
+
+section.best-sellers .container .product .title {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+section.best-sellers .container .product .price-tag{
+    margin-bottom: 19px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.best-sellers .container .product .price {
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 30px;
+    margin: 0;
+}
+
+section.best-sellers .container .product .price.discounted {
+   color: #EC1C1C;
+}
+
+section.best-sellers .container .product s {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #9B9B9B;
+}
+
+section.best-sellers .container .product button {
+    border: 1px solid #000000;
+    background-color: #ffffff;
+    border-radius: 25px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    height: 44px;
+    width: 220px;
+    text-transform: uppercase;
+}
+
+section.best-sellers .container .product:hover button {
+    border: 1px solid #3e50e5;
+    background-color: #3e50e5;
+    color: white;
+}
+
+section.signup {
+    margin: 80px 0;
+}
+
+section.signup .container {
+    width: 955px;
+    max-width: 50%;
+    height: 148px;
+    background-color: rgba(78.43, 78.43, 78.43, 0.18);
+    padding: 72px 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section.signup h3{
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 42px;
+    margin: 0 0 10px 0;
+}
+
+section.signup h4{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0 0 20px 0;
+}
+
+section.signup .input input{
+    border: 1px solid #000000;
+    border-radius: 30px 0px 0px 30px;
+    width: 306px;
+    height: 49px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #3E3E3E;
+    padding-left: 20px;
+    box-sizing: border-box;
+    max-width: 70%;
+    border-right: none;
+}
+
+section.signup .input button{
+    background-color: #3E50E5;
+    border-radius: 0px 25px 25px 0px;
+    width: 145px;
+    border: none;
+    height: 49px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #ffffff;
+    box-sizing: border-box;
+    max-width: 30%;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+section.signup .input button:hover {
+    color: #3E50E5;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+}
+
+section.signup .input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+footer {
+    background-color: #3E3E3E;
+}
+
+footer .container {
+    width: 955px;
+    max-width: 50%;   
+}
+
+footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 0;
+    margin: auto;
+}
+
+footer .footer-content ul {
+    list-style-type: none;
+}
+
+footer .footer-content ul .title {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    color: #FFFFFF;
+    margin-bottom: 19px;
+}
+
+footer .footer-content ul li a {
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #E0E0E0;
+    display: block;
+    margin-bottom: 9px;
+}
+
+footer .footer-content ul li a:hover {
+    color: #3E50E5;
+}
+
+footer .footer-content ul li:last-of-type a {
+    margin-bottom: 0px;
+}
+
+footer .rights{
+    height: 59px;
+    background-color: #2B2B2B;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #E0E0E0;
+    text-align:center;
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.about-top {
+    background-color: rgb(238, 157, 171);
+    text-align: center;
+    padding: 40px;
+}
+
+section.about-top h1 {
+    font-size: 35px;
+    margin: 0 0 10px 0;
+}
+
+section.about-top img {
+    max-width: 50%;
+    max-height: auto;
+}
+
+article .container {
+    max-width: 950px;
+    padding-top: 50px;
+    padding-bottom: 70px;
+    font-size: 16px;
+}
+
+article .container .button {
+    text-align: center;
+}
+
+article .container button {
+    margin-top: 30px;
+    width: 300px;
+    max-width: 100%;
+    height: 50px;
+    background-color: #3E50E5;
+    border-radius: 25px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+article .container button:hover {
+    background-color: #ffffff;
+    color: #3E50E5;
+    border: 1px solid #000000;
+}
+
+article .container .clients {
+    margin-top: 70px;
+    text-align: center;
+    font-size: 30px;  
+}
+
+article .container .clients h2 {
+    margin: 0 0 20px 0;
+}
+
+article .container .brands {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+article .container .brands .brand-img {
+    max-width: 33%;
+    text-align: center;
+    opacity: 0.5;
+}
+
+article .container .brands .brand-img img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+/* *********************************************
+************* Media Queries ********************
+************************************************ */
+
+/* Start of media queries for small desktops */
+@media screen and (max-width: 1440px) {
+    
+    .container {
+        width: 1180px;
+    }
+
+    .hero_img .hero_content {
+        max-width:50%;
+    }
+
+    .hero_content .container h1 {
+        font-size: 42px;
+        line-height: 50px;
+        max-width: 495px;
+        height: 100px;
+        margin: 0 0 13px 0;
+    }
+    
+    .hero_content .container p {
+        font-size: 18px;
+        line-height: 26px;
+        max-width: 518px;
+        height: 75px;
+        margin: 0 0 13px 0;
+    }
+    
+    .hero_content .container button {
+        width: 220px;
+        height: 50px;
+        font-size: 14px;
+        line-height: 21px;
+    }
+
+    section.best-sellers h2 {
+        font-size: 34px;
+        line-height: 38px;
+        margin: 70px 0 16px 0;
+    }
+
+    section.best-sellers .container .product-slider {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        margin-top: 70px;
+    }
+
+    section.best-sellers .container .product {
+        margin: 12px;
+    }
+
+    section.best-sellers .container .product .catagories {
+        font-size: 12px;
+        margin-bottom: 7px;
+    }
+    
+    section.best-sellers .container .product .title {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    section.best-sellers .container .product .price-tag{
+        margin-bottom: 6px;
+    }
+    
+    section.best-sellers .container .product .price {
+        font-size: 24px;
+    }
+
+    section.best-sellers .container .product s {
+        font-size: 14px;
+        line-height: 21px;
+    }
+
+    section.signup {
+        margin: 70px 0;
+    }
+    
+    section.signup .container {
+        width: 881px;
+        max-width: 66%;
+        height: 243px;
+        padding: 50px 0;
+    }
+    
+    section.signup h3{
+        font-size: 22px;
+    }
+    
+    section.signup h4{
+        font-size: 14px;
+        line-height: 21px;
+        margin: 0 0 15px 0;
+    }
+
+    section.signup .input {
+        max-width: 50%;
+    }
+    
+    section.signup .input input{
+        width: 326px;
+        height: 46px;
+        font-size: 12px;
+        line-height: 18px;
+    }
+    
+    section.signup .input button{
+        height: 46px;
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    footer .container {
+        max-width: 85%;   
+    }
+
+    footer .footer-content ul .title {
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+    
+    footer .footer-content ul li a {
+        font-size: 14px;
+        line-height: 21px;
+    }
+
+    footer .rights{
+        font-size: 14px;
+    }
+
+    section.about-top img {
+        max-width: 55%;
+    }
+
+    article .container {
+        max-width: 66%;
+    }
+
+    article .container .clients {
+        font-size: 25px;  
+    }
+}
+/* End of media queries for small desktops */
+
+/* Start of media queries for Tablets */
+@media screen and (max-width: 960px) {
+    
+    .container {
+        max-width: 92%;
+    }
+
+    header .container .logo {
+        font-size: 24px;
+    }
+
+    header nav ul li {
+        display: none;
+    }
+    
+    header nav ul li.menu {
+        display: block;
+    }
+
+    .hero_img .hero_content {
+        max-width:45%;
+    }
+
+    .hero_content .container h1 {
+        display: flex;
+        align-items: flex-end;
+        font-size: 30px;
+        line-height: 46px;
+        max-width: 377px;
+        height: 125px;
+        margin: 0 0 12px 0;
+    }
+    
+    .hero_content .container p {
+        font-size: 16px;
+        line-height: 18px;
+        max-width: 347px;
+        height: 76px;
+        margin: 0 0 12px 0;
+    }
+    
+    .hero_content .container button {
+        width: 176px;
+        font-size: 12px;
+        line-height: 21px;
+    }
+
+    section.best-sellers h2 {
+        font-size: 28px;
+        line-height: 38px;
+        margin: 47px 0 12px 0;
+    }
+    
+    section.best-sellers .container .product-slider {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        margin-top: 48px;
+    }
+
+    section.best-sellers .container .product {
+        margin: 9px;
+        min-width: 223px;
+    }
+
+    section.best-sellers .container .product .catagories {
+        font-size: 11px;
+        margin-bottom: 5px;
+    }
+    
+    section.best-sellers .container .product .title {
+        font-size: 13px;
+        margin-bottom: 0.5px;
+        line-height: 18px;
+    }
+    
+    section.best-sellers .container .product .price-tag{
+        margin-bottom: 1.5px;
+    }
+
+    section.best-sellers .container .product .price {
+        font-size: 16px;
+    }
+
+    section.best-sellers .container .product s {
+        font-size: 9px;
+        line-height: 30px;
+    }
+
+    section.signup {
+        margin: 48px 0;
+    }
+    
+    section.signup .container {
+        width: 768px;
+        max-width: 100%;
+    }
+
+    article .container button {
+        width: 250px;
+        height: 45px;
+        font-size: 14px;
+    }
+
+    section.signup .input {
+        max-width: 60%;
+    }
+
+    section.about-top {
+        padding: 20px;
+    }
+
+    section.about-top img {
+        max-width: 75%;
+    }
+
+    article .container {
+        max-width: 80%;
+        font-size: 14px;
+    }
+
+    article .container .clients {
+        margin-top: 60px;
+        font-size: 20px;  
+    }
+    
+    article .container .clients h2 {
+        margin: 0 0 15px 0;
+    }
+}
+/* End of media queries for Tablets */
+
+/* Start of media queries for Mobile Phones */
+@media screen and (max-width: 576px) {
+    
+    header .container .logo {
+        font-size: 18px;
+    }
+
+    header .container .logo .logoDot {
+        height: 7px;
+        width: 7px;
+    }
+
+    .dropdown_container ul {
+        padding: 0 20px;
+    }
+
+    .hero_img .hero_content {
+        position: static;
+        max-width: 90%;
+        margin: auto;
+    }
+
+    /* .play,
+    .pause  {
+        top: 0;
+        left: 0;
+        max-width: 200px;
+        transform: translate(0, 0);
+        opacity: 1;
+    } */
+
+    .hero_content .container h1 {
+        font-size: 32px;
+        line-height: 38px;
+        color: #000000;
+        text-align: center;
+        max-height: 80px;
+        margin: auto;
+        margin-top: 26px;
+        margin-bottom: 32px;
+    }
+    
+    .hero_content .container p {
+        display: none;
+    }
+    
+    .hero_content .container button {
+        margin: auto;
+    }
+
+    .hero_content .container button:hover {
+        color: #3E50E5;
+        background-color: #FFFFFF;
+        border: 1px solid #000000;
+    }
+
+    section.best-sellers h2 {
+        font-size: 24px;
+        line-height: 38px;
+        margin: 64px 0 14px 0;
+    }
+
+    section.best-sellers hr {
+        width: 40px;
+    }
+
+    section.best-sellers .container .product-slider {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        margin-top: 42px;
+    }
+
+    section.best-sellers .container .product {
+        margin: 16px 17px;
+        min-width: 250px;
+    }
+
+    section.best-sellers .container .product .catagories {
+        font-size: 12px;
+        margin-bottom: 7px;
+    }
+    
+    section.best-sellers .container .product .title {
+        font-size: 14px;
+        margin-bottom: 7px;
+    }
+
+    section.best-sellers .container .product .price-tag{
+        margin-bottom: 6px;
+        flex-direction: column;
+    }
+    
+    section.best-sellers .container .product .price {
+        font-size: 20px;
+    }
+
+    section.best-sellers .container .product s {
+        font-size: 11px;
+        line-height: 20px;
+    }
+
+    section.signup {
+        margin: 63px 0;
+    }
+    
+    section.signup .container {
+        padding: 44px 0;
+    }
+
+    section.signup .input {
+        max-width: 82%;
+    }
+
+    footer .footer-content {
+        display: block;
+        text-align: center;
+        padding: 40px 0;
+    }
+
+    footer .footer-content ul {
+        margin-top: 32px;
+    }
+
+    footer .footer-content ul:first-of-type {
+        margin-top: 0px;
+    }
+
+    section.about-top {
+        padding: 10px;
+    }
+
+    section.about-top h1 {
+        font-size: 20px;
+    }
+    
+    section.about-top img {
+        max-width: 95%;
+    }
+    
+    article .container {
+        max-width: 85%;
+        padding-top: 30px;
+        padding-bottom: 60px;
+        font-size: 12px;
+    }
+    
+    article .container button {
+        width: 200px;
+        height: 40px;
+        font-size: 12px;
+    }
+    
+    article .container .clients {
+        margin-top: 50px;
+        font-size: 15px;  
+    }
+    
+    article .container .brands .brand-img {
+        max-width: 45%;
+    }
+}
+/* End of media queries for Mobile Phones */

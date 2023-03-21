@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>techShop-Project</title>
+    <link rel="icon" type="image/x-icon" href="images/Untitled.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <a href="index.html">
+          <section class="logo">
+            <strong>Your</strong><span class="logoDot"></span>Logo
+          </section>
+        </a>
+        <nav class="navigation">
+          <ul>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="index.html#bestseller-section">Best Sellers</a></li>
+            <li><a href="index.html#newsletter-section">Newsletter</a></li>
+            <li class="menu" onclick="change_css();">
+              <a href="#">
+                <img src="images/menu.png" alt="Menu Icon" id="menuImg" />
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="dropdown_container">
+      <ul id="dropdown">
+        <li><a href="about.html" onclick="change_css();">About us</a></li>
+        <li>
+          <a href="index.html#bestseller-section" onclick="change_css();"
+            >Best Sellers</a
+          >
+        </li>
+        <li>
+          <a href="index.html#newsletter-section" onclick="change_css();"
+            >Newsletter</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <section class="hero_img">
+      <div class="slider_img">
+        <div class="mainImg">
+          <img
+            src="images/large_desk/hero_watch.jpg"
+            alt="hero image"
+            id="hero_img"
+          />
+          <div
+            class="play"
+            onmouseover="mouseover();"
+            onmouseout="mouseout();"
+            onclick="clik();"
+          >
+            <img src="images/play.png" />
+          </div>
+          <div
+            class="pause"
+            onmouseover="mouseover();"
+            onmouseout="mouseout();"
+            onclick="clik();"
+          >
+            <img src="images/pause.png" />
+          </div>
+        </div>
+        <div class="slider">
+          <span id="floatingDot"></span>
+          <span class="dot" id="dot1"></span>
+          <span class="dot" id="dot2"></span>
+          <span class="dot" id="dot3"></span>
+        </div>
+      </div>
+
+      <div class="hero_content">
+        <div class="container" id="hero_container">
+          <h1 id="heroH1">Explore our new Smart Watches series</h1>
+          <p id="heroP">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+            pellentesque, nisi id viverra aliquam, libero ipsum vehicula.
+          </p>
+          <button id="heroButton">SEE ALL WATCHES</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="best-sellers" id="bestseller-section">
+      <h2>Best Sellers</h2>
+      <hr />
+      <div class="container">
+        <div class="product-slider">
+          <div class="product new">
+            <div class="product-img">
+              <img
+                src="images/Watch_case.jpg"
+                alt="Product: Smart watch cases"
+              />
+            </div>
+            <div class="product-info">
+              <h5 class="catagories">Smart Watches, Cases, Apple</h5>
+              <h4 class="title">Penom Case for Apple Watch</h4>
+              <div class="price-tag">
+                <h3 class="price">US$ 6.99</h3>
+                <s></s>
+              </div>
+              <button>Add To Bag</button>
+            </div>
+          </div>
+
+          <div class="product new">
+            <div class="product-img">
+              <img src="images/Headphone.png" alt="Product: Headphones" />
+            </div>
+            <div class="product-info">
+              <h5 class="catagories">Headphones, Audio, Sound</h5>
+              <h4 class="title">Noise Cancelling Headphone</h4>
+              <div class="price-tag">
+                <h3 class="price">US$ 18.49</h3>
+                <s></s>
+              </div>
+              <button>Add To Bag</button>
+            </div>
+          </div>
+
+          <div class="product">
+            <div class="product-img">
+              <img
+                src="images/Camera.png"
+                alt="Product: Canon Digital SLR EOS Rebel T6"
+              />
+            </div>
+            <div class="product-info">
+              <h5 class="catagories">Cameras, Kits, Photo & Video</h5>
+              <h4 class="title">Canon Digital SLR EOS Rebel T6</h4>
+              <div class="price-tag">
+                <h3 class="price discounted">US$ 396.89</h3>
+                <s>US$ 18.49</s>
+              </div>
+              <button>Add To Bag</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="signup" id="newsletter-section">
+      <div class="container">
+        <h3>Newsletter signup</h3>
+        <h4>Subscribe now and don't miss a single deal!</h4>
+        <form class="input">
+          <input type="email" placeholder="Your email..." />
+          <button>Subscribe</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <section class="footer-content">
+          <ul>
+            <li class="title">Categories</li>
+            <li><a href="#">Watches</a></li>
+            <li><a href="#">Cameras</a></li>
+            <li><a href="#">Phones</a></li>
+            <li><a href="#">Teblets</a></li>
+            <li><a href="#">Computers</a></li>
+          </ul>
+          <ul>
+            <li class="title">About us</li>
+            <li><a href="#">Our Story</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Awards</a></li>
+            <li><a href="#">Stores</a></li>
+          </ul>
+          <ul>
+            <li class="title">Social Media</li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">YouTube</a></li>
+          </ul>
+          <ul>
+            <li class="title">Coustomer Service</li>
+            <li><a href="#">Live Chat</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Delivery & Returns</a></li>
+            <li><a href="#">Finance</a></li>
+          </ul>
+        </section>
+      </div>
+      <div class="rights">2020 &copy; All Rights Reserved</div>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>
